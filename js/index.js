@@ -27,6 +27,17 @@
 // console.log(yoshiUlugtalaba(talaba));
 
 // 3-masala
+// let son = [170, 3, 23, 430, 23, 45, 500];
+// function kattalariyigindisi(son) {
+//   let result = 0;
+//   for (let i = 0; i < son.length; i++) {
+//     if (son[i] > 100) {
+//       result += son[i];
+//     }
+//   }
+//   return result;
+// }
+// console.log(kattalariyigindisi(son));
 
 // 4-masala
 // let son = [1, 2, 3, 4, 5, 6, 7, 800, 9];
@@ -64,9 +75,41 @@
 //   });
 // }
 // console.log(kvadratgaoshirish(son));
-3, 6, 7, `reduce`;
-("o'tmagan edik bu narsani va talabalar baliga");
-("qarab ajratoshni domala korib beraman degan edi");
+
+// 6-masala
+// let son = [1000, 3000, 2300, 4300, 1800, 1200, 500];
+// function kattalariyigindisi(son) {
+//   let result = [];
+//   for (let i = 0; i < son.length; i++) {
+//     if (son[i] < 2000) {
+//       res = son[i] / 10 + son[i];
+//       result.push(res);
+//     }
+//   }
+//   return result;
+// }
+// console.log(kattalariyigindisi(son));
+
+// 7-masala
+let talaba = [
+  "name:anvar,age:21,baho:78",
+  "name:sardor,age:24,baho:89",
+  "name:anvar,age:20,baho:63",
+  "name:anvar,age:19,baho:21",
+];
+function talabalar(talaba) {
+  let result;
+  for (let z = 0; z < talaba.length; z++) {
+    if (talaba[z] >= "80") {
+      result = talaba[z];
+    }
+  }
+  return result;
+}
+console.log(talabalar(talaba));
+// 3, 6, 7, `reduce`;
+// ("o'tmagan edik bu narsani va talabalar baliga");
+// ("qarab ajratoshni domala korib beraman degan edi");
 
 // Yozuvlarga oid.
 // 1-masala
@@ -181,40 +224,40 @@
 //   console.log(grade);
 // }
 
-/* studen nomli obyekt olinibund kalit sozlar 
-*berilgan for in orqali student obyekrini aylantirdik va console.log()
+/* studen nomli obyekt olindi bund kalit sozlar 
+berilgan for in orqali student obyekrini aylantirdik va console.log()
  oynasiga chiqardik for in asososan  obyektlar uchun ishlatiladi for of esa 
  massiv va boshqalar uchun ishlatiladi 2 qismida grade nomli massiv elon qildik va massivga qiymatlat berdik
  for of yordamida esa siklni aylantirdik va lekin bu kod hatolik kuzatildi har bir berilgan qiymatlar soniga
   butun boshli massivni qayta yozib chiqdi*/
 
 // 6-savol
-console.log("task 1:");
-function hoistExample() {
-  console.log();
-  var a = 20;
-  console.log(a);
-}
-hoistExample();
-/*bu yerda task 1 tog'ridan togri oynaga chiqariladi undan keyin esa  hoisExample funcsiyasi ishlaydi
-bu yerda tepada korganimizdek birinchi a hoisting bolib tepaga kotariladi va shu yerda hatolik beradi
-keyin a ga qiymat tayinandi bundan keyingi console.log(a)qismida esa a ga qiymat berilgani uchun 
-oynaga 20 soni chiqadi*/
-console.log("task 2:");
-function scopeExample() {
-  var x = 10;
-  if (true) {
-    let y = 20;
-    const z = 30;
-    console.log(x);
-    console.log(y);
-    console.log(z);
-  }
-  console.log(x);
-  // console.log(y);
-  // console.log(z);
-}
-scopeExample();
+// console.log("task 1:");
+// function hoistExample() {
+//   console.log();
+//   var a = 20;
+//   console.log(a);
+// }
+// hoistExample();
+// /*bu yerda task 1 tog'ridan togri oynaga chiqariladi undan keyin esa  hoisExample funcsiyasi ishlaydi
+// bu yerda tepada korganimizdek birinchi a hoisting bolib tepaga kotariladi va shu yerda hatolik beradi
+// keyin a ga qiymat tayinandi bundan keyingi console.log(a)qismida esa a ga qiymat berilgani uchun
+// oynaga 20 soni chiqadi*/
+// console.log("task 2:");
+// function scopeExample() {
+//   var x = 10;
+//   if (true) {
+//     let y = 20;
+//     const z = 30;
+//     console.log(x);
+//     console.log(y);
+//     console.log(z);
+//   }
+//   console.log(x);
+//   // console.log(y);
+//   // console.log(z);
+// }
+// scopeExample();
 
 /*bu task 2 qisimda task birdagi kasbi task 2 elon qilinb oynaga chiqariladi va scopeExaple()functsiyasi
 bunda  scopeExample(); functsiya ichida if shart operatori ochildi(bloc scope) va x o'zgauvchi
@@ -225,12 +268,18 @@ bunda  scopeExample(); functsiya ichida if shart operatori ochildi(bloc scope) v
 // lekin pastdagi global scopedagi qisimda chaqirilgan y va z ozgaruvchilar consolga chiqmaydi
  unda hatolik kuzatiladi chunki y va z functsiya ichidagi shrt operatori scopesida joylashgan*/
 
-console.log("task 3 :");
-const obj = { name: "john", age: 30 };
-for (let propt in obj) {
-  console.log(propt + ":" + obj[propt]);
-}
-const arr = [12, 31, 4];
-for (let value of arr) {
-  console.log(value);
-}
+// console.log("task 3 :");
+// const obj = { name: "john", age: 30 };
+// for (let propt in obj) {
+//   console.log(propt + ":" + obj[propt]);
+// }
+// const arr = [12, 31, 4];
+// for (let value of arr) {
+//   console.log(value);
+// }
+/*obj nomli obyekt olinib unga kalit sozlari berilgan va for in yordamida 
+ sikl aylantirilgan va oynaga chiqarilgan song.console.log(popt)
+ bu su kalit sozlarning ozini chiaqradi bunga qoshimcha obj[propt]berganda 
+esa kalit sozlarga tayinlangan stringlar chiqarildi va birlashtirildi
+2 ,assivda esa for of yordamida aylantirdik va oynaga chiqardik lekin bu codda hatolik kuzatildagi 
+hatolik har bir yozgan sonim uchun massiv shuncha martta takrorlanib qolib xatolik beradi*/
